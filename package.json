@@ -4,7 +4,7 @@
   "description": "kianada service for echodot",
   "main": "server.js",
   "scripts": {
-    "test": "npm test"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
