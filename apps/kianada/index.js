@@ -4,7 +4,7 @@ var alexa = require('alexa-app');
 module.change_code = 1;
 
 // Define an alexa-app
-var app = new alexa.app('hello_world');
+var app = new alexa.app('kianada');
 app.launch(function(req, res) {
   res.say("Hello World!!");
 });
