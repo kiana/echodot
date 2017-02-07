@@ -1,26 +1,52 @@
 var alexa = require('alexa-app');
 
-// Allow this module to be reloaded by hotswap when changed
 module.change_code = 1;
 
-// Define an alexa-app
 var app = new alexa.app('askmmr');
 app.launch(function(req, res) {
   res.say("Ask MMR launching");
 });
 
-app.intent('NameIntent', {
-  "slots": { "NAME": "LITERAL", "AGE": "NUMBER" },
-  "utterances": ["{My name is|my name's} {matt|bob|bill|jake|nancy|mary|jane|NAME} and I am {1-100|AGE}{ years old|}"]
+app.intent('ForTransactions', {
+  "slots": {},
+  "utterances": [""]
 }, function(req, res) {
-  res.say('Your name is ' + req.slot('NAME') + ' and you are ' + req.slot('AGE') + ' years old');
+  res.say('');
 });
 
-app.intent('AgeIntent', {
-  "slots": { "AGE": "NUMBER" },
-  "utterances": ["My age is {1-100|AGE}"]
+app.intent('ForHistoricalAverage', {
+  "slots": {},
+  "utterances": [""]
 }, function(req, res) {
-  res.say('Your age is ' + req.slot('AGE'));
+  res.say('');
+});
+
+app.intent('ForProjectedAverage', {
+  "slots": {},
+  "utterances": [""]
+}, function(req, res) {
+  res.say('');
+});
+
+app.intent('ForEstimatedRetailValue', {
+  "slots": {},
+  "utterances": [""]
+}, function(req, res) {
+  res.say('');
+});
+
+app.intent('ToAdjustMMR', {
+  "slots": {},
+  "utterances": [""]
+}, function(req, res) {
+  res.say('');
+});
+
+app.intent('ForAverageMMR', {
+  "slots": {},
+  "utterances": [""]
+}, function(req, res) {
+  res.say('');
 });
 
 module.exports = app;
