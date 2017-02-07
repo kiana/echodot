@@ -1,0 +1,14 @@
+{
+  "name": "askmmr",
+  "version": "1.0.0",
+  "description": "mmr for echo dot",
+  "main": "index.js",
+  "author": "Kiana Tennyson",
+  "license": "ISC",
+  "alexa": {
+    "applicationId": "amzn1.ask.skill.49a12bd3-7405-4ab6-8fb6-fcc9c60b6f8f"
+  },
+  "dependencies": {
+    "alexa-app": "3.0.0"
+  }
+}
