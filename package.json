@@ -1,0 +1,15 @@
+{
+  "name": "echodot",
+  "version": "1.0.0",
+  "description": "kianada service for echodot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiana/echodot.git"
+  },
+  "author": "Kiana Tennyson",
+  "license": "ISC"
+}
