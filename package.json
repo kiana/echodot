@@ -11,5 +11,8 @@
     "url": "https://github.com/kiana/echodot.git"
   },
   "author": "Kiana Tennyson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
 }
