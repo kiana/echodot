@@ -1,7 +1,7 @@
 {
   "name": "echodot",
   "version": "1.0.0",
-  "description": "kianada service for echodot",
+  "description": "firstalexaskill service for echodot",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
