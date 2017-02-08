@@ -90,7 +90,7 @@ app.intent('ForEstimatedRetailValue', {
   }
 });
 
-app.intent('ToAdjustMMR', {
+app.intent('ToAdjust', {
   "slots": {
     "miles": "AMAZON.NUMBER",
     "color": "AMAZON.Color",
