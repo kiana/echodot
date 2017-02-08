@@ -10,6 +10,26 @@ app.launch(function(req, res) {
   res.say("Ask MMR launching");
 });
 
+app.intent('ForAverageMMR', {
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
+}, function(req, res) {
+  if (req.slot('VIN')) {
+    res.say('Today the average <say-as interpret-as="spell-out">MMR</say-as> for ' + req.slot('VIN') + ' is $1775, with average odometer of 143,668, average condition of 2 point zero, and a typical range between $1,000 and $2,5550');
+  } else if (req.slot('MMS')){
+    res.say('Today the average <say-as interpret-as="spell-out">MMR</say-as> for ' + req.slot('YEAR') + req.slot('MMS') + ' is $1775, with average odometer of 143,668, average condition of 2 point zero, and a typical range between $1,000 and $2,5550');
+  } else {
+    res.say('Unable to retrieve Average <say-as interpret-as="spell-out">MMR</say-as> at this time.');
+  }
+});
+
 app.intent('ForTransactions', {
   "slots": {
     "VIN": "AMAZON.LITERAL",
@@ -76,9 +96,9 @@ app.intent('ForEstimatedRetailValue', {
   ]
 }, function(req, res) {
   if (req.slot('VIN')) {
-    res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('VIN') + ' is $5,175, with a typical range of $4,250 and $6,100');
+    res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('VIN') + ' is $5175, with a typical range of $4250 and $6100');
   } else if (req.slot('MMS')){
-    res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('YEAR') + req.slot('MMS') + ' is $5,175, with a typical range of $4,250 and $6,100');
+    res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('YEAR') + req.slot('MMS') + ' is $5175, with a typical range of $4250 and $6100');
   } else {
     res.say('Unable to retrieve estimated retail value at this time.');
   }
@@ -107,31 +127,11 @@ app.intent('ToAdjustMMR', {
   }
 
   if (req.slot('condition')) {
-    res.say('Checking for condition ' + req.slot('condition') + ', the adjusted ' + mmr + ' increases $350 to $2,125.')
+    res.say('Checking for condition ' + req.slot('condition') + ', the adjusted ' + mmr + ' increases $350 to $2125.')
   }
 
   if (req.slot('miles')) {
     res.say('With ' + req.slot('miles') + ' miles, the adjusted ' + mmr + ' increases $1560 to $3325. You should probably buy that car.');
-  }
-});
-
-app.intent('ForAverageMMR', {
-  "slots": {
-    "VIN": "AMAZON.LITERAL",
-    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
-    "MMS": "AMAZON.LITERAL"
-  },
-  "utterances": [
-    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
-  ]
-}, function(req, res) {
-  if (req.slot('VIN')) {
-    res.say('Let\'s see<break time="1s" /> Today the average <say-as interpret-as="spell-out">MMR</say-as> for ' + req.slot('VIN') + 'is $1,775, with average odometer of 143,668, average condition of 2 point zero, and a typical range between $1,000 and $2,5550');
-  } else if (req.slot('MMS')){
-    res.say('Let\'s see<break time="1s" /> Today the average <say-as interpret-as="spell-out">MMR</say-as> for ' + req.slot('YEAR') + req.slot('MMS') + 'is $1,775, with average odometer of 143,668, average condition of 2 point zero, and a typical range between $1,000 and $2,5550');
-  } else {
-    res.say('Unable to retrieve Average <say-as interpret-as="spell-out">MMR</say-as> at this time.');
   }
 });
 
