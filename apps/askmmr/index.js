@@ -17,7 +17,7 @@ app.intent('ForTransactions', {
   },
   "utterances": [
     "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
   res.say('yay for transactions');
@@ -31,7 +31,7 @@ app.intent('ForHistoricalAverage', {
   },
   "utterances": [
     "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
   res.say('yay for historical average');
@@ -45,7 +45,7 @@ app.intent('ForProjectedAverage', {
   },
   "utterances": [
     "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
   res.say('yay for projected average');
@@ -59,7 +59,7 @@ app.intent('ForEstimatedRetailValue', {
   },
   "utterances": [
     "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
   res.say('yay for estimated retail value');
@@ -90,7 +90,7 @@ app.intent('ForAverageMMR', {
   },
   "utterances": [
     "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
   res.say('yay for average mmr');
