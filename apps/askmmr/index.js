@@ -69,13 +69,13 @@ app.intent('ToAdjustMMR', {
   "slots": {
     "miles": "AMAZON.NUMBER",
     "color": "AMAZON.Color",
-    "condition1": "AMAZON.NUMBER",
-    "condition2": "AMAZON.NUMBER",
+    "tensdigit": "AMAZON.NUMBER",
+    "onesdigit": "AMAZON.NUMBER",
     "region": "LIST_OF_REGIONS" },
   "utterances": [
     "by {1000-90000 by 100|miles} miles",
     "by color {-|color}",
-    "by condition {0-5|condition1}{point| }{0-9|condition2}",
+    "by condition {0-5|tensdigit}{point| }{0-9|onesdigit}",
     "by region {-|region}"
   ]
 }, function(req, res) {
