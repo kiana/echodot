@@ -22,9 +22,9 @@ app.intent('ForAverageMMR', {
   ]
 }, function(req, res) {
   if (req.slot('VIN')) {
-    res.say('Today the average <say-as interpret-as="spell-out">MMR</say-as> for ' + req.slot('VIN') + ' is $1775, with average odometer of 143,668, average condition of 2 point zero, and a typical range between $1,000 and $2,5550');
+    res.say('Today the average '+mmr+' for ' + req.slot('VIN') + ' is $1775, with average odometer of <say-as interpret-as="cardinal">143668</say-as>, average condition of 2 point zero, and a typical range between $1000 and $2550');
   } else if (req.slot('MMS')){
-    res.say('Today the average <say-as interpret-as="spell-out">MMR</say-as> for ' + req.slot('YEAR') + req.slot('MMS') + ' is $1775, with average odometer of 143,668, average condition of 2 point zero, and a typical range between $1,000 and $2,5550');
+    res.say('Today the average '+mmr+' for ' + req.slot('YEAR') + req.slot('MMS') + ' is $1775, with average odometer of <say-as interpret-as="cardinal">143668</say-as>, average condition of 2 point zero, and a typical range between $1000 and $2550');
   } else {
     res.say('Unable to retrieve Average <say-as interpret-as="spell-out">MMR</say-as> at this time.');
   }
