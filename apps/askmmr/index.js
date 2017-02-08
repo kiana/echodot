@@ -3,50 +3,97 @@ var alexa = require('alexa-app');
 module.change_code = 1;
 
 var app = new alexa.app('askmmr');
+app.dictionary = {"colors":["beige","black","blue","brown","burgundy","camouflage","charcoal","gold","gray","green","lime","off-white","orange","pink","purple","red","silver","turquoise","white","yellow"]};
+
 app.launch(function(req, res) {
   res.say("Ask MMR launching");
 });
 
 app.intent('ForTransactions', {
-  "slots": {},
-  "utterances": [""]
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
 }, function(req, res) {
-  res.say('');
+  res.say('yay for transactions');
 });
 
 app.intent('ForHistoricalAverage', {
-  "slots": {},
-  "utterances": [""]
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
 }, function(req, res) {
-  res.say('');
+  res.say('yay for historical average');
 });
 
 app.intent('ForProjectedAverage', {
-  "slots": {},
-  "utterances": [""]
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
 }, function(req, res) {
-  res.say('');
+  res.say('yay for projected average');
 });
 
 app.intent('ForEstimatedRetailValue', {
-  "slots": {},
-  "utterances": [""]
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
 }, function(req, res) {
-  res.say('');
+  res.say('yay for estimated retail value');
 });
 
 app.intent('ToAdjustMMR', {
-  "slots": {},
-  "utterances": [""]
+  "slots": {
+    "miles": "AMAZON.NUMBER",
+    "color": "AMAZON.Color",
+    "condition1": "AMAZON.NUMBER",
+    "condition2": "AMAZON.NUMBER",
+    "region": "LIST_OF_REGIONS" },
+  "utterances": [
+    "by {1000-90000 by 100|miles} miles",
+    "by color {-|color}",
+    "by condition {0-5|condition1}{point| }{0-9|condition2}",
+    "by region {-|region}"
+  ]
 }, function(req, res) {
-  res.say('');
+  res.say('yay to adjust mmr');
 });
 
 app.intent('ForAverageMMR', {
-  "slots": {},
-  "utterances": [""]
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
 }, function(req, res) {
-  res.say('');
+  res.say('yay for average mmr');
 });
 
 module.exports = app;
