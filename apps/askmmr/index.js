@@ -24,7 +24,7 @@ app.intent('ForAverageMMR', {
   if (req.slot('VIN')) {
     res.say('Today the average '+mmr+' for ' + req.slot('VIN') + ' is $1775, with average odometer of <say-as interpret-as="cardinal">143668</say-as>, average condition of 2 point zero, and a typical range between $1000 and $2550');
   } else if (req.slot('MMS')){
-    res.say('Today the average '+mmr+' for ' + req.slot('YEAR') + req.slot('MMS') + ' is $1775, with average odometer of <say-as interpret-as="cardinal">143668</say-as>, average condition of 2 point zero, and a typical range between $1000 and $2550');
+    res.say('Today the average '+mmr+' for ' + req.slot('YEAR') +' '+ req.slot('MMS') + ' is $1775, with average odometer of <say-as interpret-as="cardinal">143668</say-as>, average condition of 2 point zero, and a typical range between $1000 and $2550');
   } else {
     res.say('Unable to retrieve Average <say-as interpret-as="spell-out">MMR</say-as> at this time.');
   }
@@ -44,7 +44,7 @@ app.intent('ForHistoricalAverage', {
   if (req.slot('VIN')) {
     res.say('The historical average for the past 30 days is $1725, average odometer <say-as interpret-as="cardinal">143668</say-as>, 6 months ago is $1875, average odometer <say-as interpret-as="cardinal">136056</say-as>, last year is $2350, odometer <say-as interpret-as="cardinal">136715</say-as> for ' + req.slot('VIN'));
   } else if (req.slot('MMS')){
-    res.say('The historical average for the past 30 days is $1725, average odometer <say-as interpret-as="cardinal">143668</say-as>, 6 months ago is $1875, average odometer <say-as interpret-as="cardinal">136056</say-as>, last year is $2350, odometer <say-as interpret-as="cardinal">136715</say-as> for ' + req.slot('YEAR') + req.slot('MMS'));
+    res.say('The historical average for the past 30 days is $1725, average odometer <say-as interpret-as="cardinal">143668</say-as>, 6 months ago is $1875, average odometer <say-as interpret-as="cardinal">136056</say-as>, last year is $2350, odometer <say-as interpret-as="cardinal">136715</say-as> for ' + req.slot('YEAR') +' '+ req.slot('MMS'));
   } else {
     res.say('Unable to retrieve historical average at this time.');
   }
@@ -64,7 +64,7 @@ app.intent('ForProjectedAverage', {
   if (req.slot('VIN')) {
     res.say('The projected average next month is $1750 for ' + req.slot('VIN'));
   } else if (req.slot('MMS')){
-    res.say('The projected average next month is $1750 for ' + req.slot('YEAR') + req.slot('MMS'));
+    res.say('The projected average next month is $1750 for ' + req.slot('YEAR') +' '+ req.slot('MMS'));
   } else {
     res.say('Unable to retrieve projected average at this time.');
   }
@@ -84,7 +84,7 @@ app.intent('ForEstimatedRetailValue', {
   if (req.slot('VIN')) {
     res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('VIN') + ' is $5175, with a typical range of $4250 and $6100');
   } else if (req.slot('MMS')){
-    res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('YEAR') + req.slot('MMS') + ' is $5175, with a typical range of $4250 and $6100');
+    res.say('Let\'s see<break time="1s" /> Today the estimated retail value for ' + req.slot('YEAR') +' '+ req.slot('MMS') + ' is $5175, with a typical range of $4250 and $6100');
   } else {
     res.say('Unable to retrieve estimated retail value at this time.');
   }
