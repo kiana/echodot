@@ -30,20 +30,6 @@ app.intent('ForAverageMMR', {
   }
 });
 
-app.intent('ForTransactions', {
-  "slots": {
-    "VIN": "AMAZON.LITERAL",
-    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
-    "MMS": "AMAZON.LITERAL"
-  },
-  "utterances": [
-    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
-  ]
-}, function(req, res) {
-  res.say('Do you really want me to read out all those transactions? I don\'t think so.');
-});
-
 app.intent('ForHistoricalAverage', {
   "slots": {
     "VIN": "AMAZON.LITERAL",
@@ -133,6 +119,20 @@ app.intent('ToAdjustMMR', {
   if (req.slot('miles')) {
     res.say('With ' + req.slot('miles') + ' miles, the adjusted ' + mmr + ' increases $1560 to $3325. You should probably buy that car.');
   }
+});
+
+app.intent('ForTransactions', {
+  "slots": {
+    "VIN": "AMAZON.LITERAL",
+    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
+    "MMS": "AMAZON.LITERAL"
+  },
+  "utterances": [
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
+    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
+  ]
+}, function(req, res) {
+  res.say('Do you really want me to read out all those transactions? I don\'t think so.');
 });
 
 module.exports = app;
