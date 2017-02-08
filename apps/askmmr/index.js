@@ -121,18 +121,4 @@ app.intent('ToAdjustMMR', {
   }
 });
 
-app.intent('ForTransactions', {
-  "slots": {
-    "VIN": "AMAZON.LITERAL",
-    "YEAR": "AMAZON.FOUR_DIGIT_NUMBER",
-    "MMS": "AMAZON.LITERAL"
-  },
-  "utterances": [
-    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
-    "for vin {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
-  ]
-}, function(req, res) {
-  res.say('Do you really want me to read out all those transactions? I don\'t think so.');
-});
-
 module.exports = app;
