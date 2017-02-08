@@ -16,7 +16,7 @@ app.intent('ForTransactions', {
     "MMS": "AMAZON.LITERAL"
   },
   "utterances": [
-    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
     "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
@@ -30,7 +30,7 @@ app.intent('ForHistoricalAverage', {
     "MMS": "AMAZON.LITERAL"
   },
   "utterances": [
-    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
     "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
@@ -44,7 +44,7 @@ app.intent('ForProjectedAverage', {
     "MMS": "AMAZON.LITERAL"
   },
   "utterances": [
-    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
     "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
@@ -58,7 +58,7 @@ app.intent('ForEstimatedRetailValue', {
     "MMS": "AMAZON.LITERAL"
   },
   "utterances": [
-    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
     "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
@@ -89,7 +89,7 @@ app.intent('ForAverageMMR', {
     "MMS": "AMAZON.LITERAL"
   },
   "utterances": [
-    "for a {-|YEAR} {PONTIAC G 6 V 6 4 DOOR SEDAN|MMS}",
+    "for a {-|YEAR} {PONTIAC G six V six four DOOR SEDAN|MMS}",
     "for {one G two Z G five five eight seven six four two four nine eight seven zero|VIN}"
   ]
 }, function(req, res) {
